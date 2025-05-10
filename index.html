@@ -1,197 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warman Entertainment - Indie Game Development</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        .header {
-            padding: 2rem;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #888888;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 8rem 2rem;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            color: #cccccc;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #444444;
-            color: #ffffff;
-        }
-
-        .games-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .game-card {
-            background-color: #111111;
-            padding: 2rem;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .game-card h3 {
-            margin-bottom: 1rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid #ffffff;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">
-                <!-- Add your logo file in the images folder -->
-                <img src="images/logo.png" alt="Warman Entertainment Logo" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="#games">Games</a>
-                <a href="#about">About</a>
-                <a href="#careers">Careers</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>"A one man army in digital arts and technology"</h1>
-        <p>Independent game development studio creating stylised games and media, frame by frame.</p>
-        <a href="#games" class="cta-button">Explore Our Projects</a>
-    </section>
-
-    <section class="games-section" id="games">
-        <h2>Our Current Projects</h2>
-        <div class="games-grid">
-            <div class="game-card">
-                <a href="#" style="color: #ffffff; margin: 0 1rem;"><b>Rot 'N Rubber</b></a>
-                <p>A post-apocalyptic drifting horde game</p>
-                <p><b>Status: In Development</b></p>
-                <p>Platform: PC / Consoles</p>
-            </div>
-            <div class="game-card">
-                <a href="https://warman-entertainment.itch.io/caw-caw" style="color: #ffffff; margin: 0 1rem;"><b>CAW CAW</b></a>
-                <p>A PSX style, airborne hack 'N slash</p>
-                <p><b>Status: Alpha Demo</b></p>
-                <p>Platform: PC / Consoles</p>
-            </div>
-            <div class="game-card">
-                <a href="#" style="color: #ffffff; margin: 0 1rem;"><b>WalkerZ</b></a>
-                <p>Reclaim your neighbourhood from the apocalypse in real world AR</p>
-                <p><b>Status: In Development</b></p>
-                <p>Platform: Android</p>
-
-            </div>
-            <div class="game-card">
-		<a href="https://waghemansmatisse.wixsite.com/website/videos" style="color: #ffffff; margin: 0 1rem;"><b>Egg-Venture</b></a>
-                <p>A VR, tamagochi teambuilding game</p>
-                <p><b>Status: Limited Access</b></p>
-                <p>Platform: Quest / PC VR</p>
-            </div>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | Sweet Teeth</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
-    </section>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Sweet Teeth</div>
+      </div>
+    </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
 
-    <footer class="footer">
-        <p>&copy; 2025 Warman Entertainment. All rights reserved.</p>
-        <div style="margin-top: 1rem;">
-            <a href="https://x.com/wm_gamedev" style="color: #ffffff; margin: 0 1rem;">Twitter</a>
-            <a href="https://www.instagram.com/warman.entertainment/" style="color: #ffffff; margin: 0 1rem;">Instagram</a>
-            <a href="https://www.linkedin.com/company/warman-entertainment" style="color: #ffffff; margin: 0 1rem;">LinkedIn</a>
-        </div>
-    </footer>
-</body>
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Builds.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/Builds.data.br",
+        frameworkUrl: buildUrl + "/Builds.framework.js.br",
+        codeUrl: buildUrl + "/Builds.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Warman-Entertainment",
+        productName: "Sweet Teeth",
+        productVersion: "0.1.0",
+        showBanner: unityShowBanner,
+      };
+
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                document.querySelector("#unity-loading-bar").style.display = "none";
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+
+    </script>
+  </body>
 </html>
