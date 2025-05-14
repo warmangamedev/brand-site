@@ -1,18 +1,30 @@
-﻿<head>
+﻿<script>
+    // Check for saved preference or system preference
+    if (localStorage.theme === 'dark' || 
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+      darkMode: 'class',
+    }
+  </script>
+  
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://cdn.tailwindcss.
-com"></script>
-<script>
-tailwind.config = {
-corePlugins:{
-preflight: false,
-}
-}
-</script>
+  <!-- Add this script at the very beginning to prevent flash of light mode -->
+  
   <link href="./output.css" rel="stylesheet" />
-  <div class="bg my-4 flex h-10 w-full items-center justify-center rounded-md bg-white p-2 dark:bg-black">
-    <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+  <div class="bg my-4 flex h-10 w-full items-center justify-center rounded-md bg-black p-2 dark:bg-white">
+    <h1 class="text-center font-mono font-extrabold text-white dark:text-black">Je moeder</h1>
   </div>
 </head>
 <body>
@@ -25,23 +37,27 @@ preflight: false,
     <div class="h-16 rounded-full bg-indigo-500"></div>
     <div class="h-16 rounded-full bg-violet-500"></div>
   </div>
-  <div class="rounded-lgbg-white m-10 bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black">
-    <h3 class="text-base font-medium tracking-tight text-black dark:text-white">Writes Upside-Down</h3>
-    <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.</p>
-    <button id="toggleDark" class="mt-8 rounded-md bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900" onclick="document.body.classList.toggle('dark')">FLASHBANG</button>
+  <div class="rounded-lgbg-white m-10  px-6 py-8 shadow-xl ring-1 ring-slate-900/5 bg-black dark:bg-white">
+    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Writes Upside-Down</h3>
+    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.</p>
+    <button id="toggleDark" class="mt-8 rounded-md bg-white dark:bg-black px-4 py-2 text-sm font-medium text-black dark:text-white">FLASHBANG</button>
   </div>
-
+  
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {
-      const toggleDark = document.getElementById('toggleDark')
-      toggleDark.addEventListener('click', function () {
-        if (document.documentElement.classList.includes('dark')) {
-          document.documentElement.classList.remove('dark')
+      const toggleDark = document.getElementById('toggleDark');
+      toggleDark.addEventListener('click', function() {
+        // Toggle the dark class on the html element
+        document.documentElement.classList.toggle('dark');
+        
+        // Save preference to localStorage
+        if (document.documentElement.classList.contains('dark')) {
+          localStorage.theme = 'dark';
+        } else {
+          localStorage.theme = 'light';
         }
-        else {
-          document.documentElement.classList.add('dark')
-        }
-        alert("click!")
+        
+        console.log("Dark mode toggled:", document.documentElement.classList.contains('dark'));
       });
     });
   </script>
