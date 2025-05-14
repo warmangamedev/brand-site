@@ -1,4 +1,5 @@
-﻿<script>
+﻿  <!-- Add this script at the very beginning to prevent flash of light mode -->
+<script>
     // Check for saved preference or system preference
     if (localStorage.theme === 'dark' || 
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -20,41 +21,52 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Add this script at the very beginning to prevent flash of light mode -->
-  
+
   <link href="./output.css" rel="stylesheet" />
-  <div class="bg my-4 flex h-10 w-full items-center justify-center rounded-md bg-black p-2 dark:bg-white">
+  <div class="bg my-4 flex h-25 w-full items-center justify-center rounded-md bg-black p-2 dark:bg-white">
     <h1 class="text-center font-mono font-extrabold text-white dark:text-black">Je moeder</h1>
   </div>
 </head>
 <body>
   <div class="bg-white dark:bg-black">
-    <div class="h-16 snap-center rounded-full bg-red-500"></div>
-    <div class="h-16 rounded-full bg-orange-500"></div>
-    <div class="h-16 rounded-full bg-yellow-500"></div>
-    <div class="h-16 rounded-full bg-green-500"></div>
-    <div class="h-16 rounded-full bg-blue-500"></div>
-    <div class="h-16 rounded-full bg-indigo-500"></div>
-    <div class="h-16 rounded-full bg-violet-500"></div>
+    <div class="h-16 bg-red-500"></div>
+    <div class="h-16 bg-orange-500"></div>
+    <div class="h-16 bg-yellow-500"></div>
+    <div class="h-16 bg-green-500"></div>
+    <div class="h-16 bg-blue-500"></div>
+    <div class="h-16 bg-indigo-500"></div>
+    <div class="h-16 bg-violet-500"></div>
   </div>
-  <div class="rounded-lgbg-white m-10  px-6 py-8 shadow-xl ring-1 ring-slate-900/5 bg-black dark:bg-white">
-    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Writes Upside-Down</h3>
-    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.</p>
-    <button id="toggleDark" class="mt-8 rounded-md bg-white dark:bg-black px-4 py-2 text-sm font-medium text-black dark:text-white">FLASHBANG</button>
+  <div class="rounded-e-full m-10  px-6 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
+    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
+    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
+    <button id="toggleDark" class="mt-8 rounded-md bg-white dark:bg-black px-4 py-2 text-sm font-medium text-black dark:text-white">*FLASHBANG*</button>
   </div>
+  </audio>
+  <audio id="darkModeSound" preload="auto">
+    <source src="./resources/flashbang.wav" type="audio/mpeg">
+    <!-- Add a fallback sound or alternative format if needed -->
+  </audio>
   
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {
       const toggleDark = document.getElementById('toggleDark');
+      const lightModeSound = document.getElementById('lightModeSound');
+      const darkModeSound = document.getElementById('darkModeSound');
+      
       toggleDark.addEventListener('click', function() {
+        // Check current mode before toggle
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        
         // Toggle the dark class on the html element
         document.documentElement.classList.toggle('dark');
         
-        // Save preference to localStorage
-        if (document.documentElement.classList.contains('dark')) {
+        // Play appropriate sound based on the mode we're switching TO
+        if (document.documentElement.classList.contains('dark') == false) {
+          // Playing darkModeSound (switching to dark)
+          darkModeSound.currentTime = 0;
+          darkModeSound.play().catch(e => console.log("Sound play failed:", e));
           localStorage.theme = 'dark';
-        } else {
-          localStorage.theme = 'light';
         }
         
         console.log("Dark mode toggled:", document.documentElement.classList.contains('dark'));
