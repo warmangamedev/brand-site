@@ -43,17 +43,94 @@
 
 <body>
 
-  <div class="bg-white dark:bg-black">
-    <div class="h-16 bg-red-500"></div>
-    <div class="h-16 bg-orange-500"></div>
-    <div class="h-16 bg-yellow-500"></div>
-    <div class="h-16 bg-green-500"></div>
-    <div class="h-16 bg-blue-500"></div>
-    <div class="h-16 bg-indigo-500"></div>
-    <div class="h-16 bg-violet-500"></div>
+  <style>
+    .hide-horizontal-scrollbar {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE/Edge */
+    }
+
+    .hide-horizontal-scrollbar::-webkit-scrollbar {
+      display: none;
+      /* Chrome/Safari */
+    }
+  </style>
+
+  <div id="scroll-container2"
+    class="relative h-150 content-center w-full overflow-x-auto bg-white dark:bg-black scroll-smooth hide-horizontal-scrollbar">
+    <div id="scroll-content" class="flex flex-wrap gap-4 w-max items-center">
+      <!-- One set of logos -->
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <!-- Duplicate set for looping -->
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+      <img src="resources/logo.png" class="h-full" />
+    </div>
   </div>
 
-  <div class="flex bg-white dark:bg-black">
+  <div id="scroll-container"
+    class="relative h-150 content-center w-full overflow-x-auto bg-white dark:bg-black scroll-smooth hide-horizontal-scrollbar">
+    <div id="scroll-content" class="flex flex-wrap gap-4 w-max items-center">
+      <!-- One set of logos -->
+      <img src="resources/EggVenture.gif" class="h-full w-auto shrink-0" />
+      <img src="resources/YouCantHoleIt.gif" class="h-full" />
+      <img src="resources/CORE.gif" class="h-full" />
+      <img src="resources/BusOff.gif" class="h-full" />
+      <!-- Duplicate set for looping -->
+      <img src="resources/EggVenture.gif" class="h-full w-auto shrink-0" />
+      <img src="resources/YouCantHoleIt.gif" class="h-full" />
+      <img src="resources/CORE.gif" class="h-full" />
+      <img src="resources/BusOff.gif" class="h-full" />
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById("scroll-container");
+    const container2 = document.getElementById("scroll-container2");
+
+    let scrollSpeed = 0.5; // Pixels per frame
+    let isUserScrolling = false;
+    let userScrollTimeout;
+
+    function autoScroll() {
+      if (!isUserScrolling) {
+        container.scrollLeft += scrollSpeed;
+        container2.scrollLeft += scrollSpeed * 2;
+      }
+      
+      // Reset to beginning if scrolled halfway through content
+      if (container.scrollLeft >= container.scrollWidth / 2)
+      {
+        container.scrollLeft = 0;
+      }
+
+      requestAnimationFrame(autoScroll);
+    }
+
+    container.addEventListener("scroll", () => {
+      isUserScrolling = true;
+
+      clearTimeout(userScrollTimeout);
+      userScrollTimeout = setTimeout(() => {
+        isUserScrolling = false;
+      }); // Resume auto-scroll 2 seconds after user stops scrolling
+    });
+
+    // Start animation
+    requestAnimationFrame(autoScroll);
+  </script>
+
+
+
+
+  <div class=" bg-white dark:bg-black">
     <div class="h-16 bg-red-500"></div>
     <div class="h-16 bg-orange-500"></div>
     <div class="h-16 bg-yellow-500"></div>
