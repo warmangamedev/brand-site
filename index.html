@@ -1,32 +1,45 @@
-﻿  <!-- Add this script at the very beginning to prevent flash of light mode -->
+﻿<!-- Add this script at the very beginning to prevent flash of light mode -->
 <script>
-    // Check for saved preference or system preference
-    if (localStorage.theme === 'dark' || 
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      corePlugins: {
-        preflight: false,
-      },
-      darkMode: 'class',
-    }
-  </script>
-  
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  // Check for saved preference or system preference
+  if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    corePlugins: {
+      preflight: false,
+    },
+    darkMode: 'class',
+  }
+</script>
 
-  <link href="./output.css" rel="stylesheet" />
-  <div class="bg my-4 flex h-25 w-full items-center justify-center rounded-md bg-black p-2 dark:bg-white">
-    <h1 class="text-center font-mono font-extrabold text-white dark:text-black">Je moeder</h1>
+<!-- Add favicon links -->
+<link rel="icon" href="resources/logo.png" sizes="any">
+<link href="./output.css" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
+  <div class="bg my-4 flex h-50 w-full bg-white p-2 dark:bg-black">
+    <img id="logo" class="h-full w-auto" src='resources/logo_white.svg'>
+    <div class="h-auto w-5/6 flex items-center justify-end space-x-5">
+      <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+      <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+      <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+      <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+      <h1 class="text-center font-mono font-extrabold text-black dark:text-white">Je moeder</h1>
+
+    </div>
   </div>
+
 </head>
+
 <body>
   <div class="bg-white dark:bg-black">
     <div class="h-16 bg-red-500"></div>
@@ -37,38 +50,56 @@
     <div class="h-16 bg-indigo-500"></div>
     <div class="h-16 bg-violet-500"></div>
   </div>
-  <div class="rounded-e-full m-10  px-6 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
-    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
-    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
-    <button id="toggleDark" class="mt-8 rounded-md bg-white dark:bg-black px-4 py-2 text-sm font-medium text-black dark:text-white">*FLASHBANG*</button>
-  </div>
+
+  <div class="flex items-center justify-center">
+    <div class="rounded-full w-1/2 m-10 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
+      <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
+      <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
+      <button id="toggleDark" class="mt-8 rounded-md bg-white dark:bg-black px-4 py-2 text-sm font-medium text-black dark:text-white">*FLASHBANG*</button>
+    </div>
+    </div>
+
   </audio>
   <audio id="darkModeSound" preload="auto">
     <source src="./resources/flashbang.wav" type="audio/mpeg">
     <!-- Add a fallback sound or alternative format if needed -->
   </audio>
-  
+
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {
       const toggleDark = document.getElementById('toggleDark');
       const lightModeSound = document.getElementById('lightModeSound');
       const darkModeSound = document.getElementById('darkModeSound');
-      
-      toggleDark.addEventListener('click', function() {
+      const logo = document.getElementById('logo');
+
+      function updateLogoBasedOnTheme() {
+        if (document.documentElement.classList.contains('dark')) {
+          logo.src = 'resources/logo_white.svg';
+        } else {
+          logo.src = 'resources/logo_black.svg';
+        }
+      }
+      updateLogoBasedOnTheme();
+
+      toggleDark.addEventListener('click', function () {
         // Check current mode before toggle
         const isDarkMode = document.documentElement.classList.contains('dark');
-        
+
         // Toggle the dark class on the html element
         document.documentElement.classList.toggle('dark');
-        
+
+        // Update logo image
+        updateLogoBasedOnTheme();
+
         // Play appropriate sound based on the mode we're switching TO
         if (document.documentElement.classList.contains('dark') == false) {
           // Playing darkModeSound (switching to dark)
           darkModeSound.currentTime = 0;
+          darkModeSound.volume = 0.1;
           darkModeSound.play().catch(e => console.log("Sound play failed:", e));
           localStorage.theme = 'dark';
         }
-        
+
         console.log("Dark mode toggled:", document.documentElement.classList.contains('dark'));
       });
     });
