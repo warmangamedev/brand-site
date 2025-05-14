@@ -1,13 +1,17 @@
 {
-  "name": "portfolio-page",
+  "name": "repos",
   "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "parcel-bundler": "^1.6.1",
-    "next": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+  "main": "index.js",
+  "scripts": {
+    "build:tailwinds": "tailwind build src/style.css -o public/style.css"
   },
-  "scripts": {},
-  "devDependencies": {}
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^4.1.6"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.6"
+  }
 }
