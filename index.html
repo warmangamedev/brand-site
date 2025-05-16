@@ -76,19 +76,6 @@
 </header>
 
 
-
-<style>
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-</style>
-
 <body>
 
   <!--HERO-->
@@ -98,92 +85,253 @@
     </h1>
   </div>
 
-  <!--PROJECTS-->
+
+  <style>
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <!-- PROJECTS -->
   <a class="flex mx-auto mt-20" href="projects.html">
-    <h1 class="mx-auto mb-5 text-xl font-sans font-bold text-black dark:text-white rotate-[0.02rad]">
+    <h1 class="mx-auto mb-5 text-xl font-sans font-bold text-black dark:text-white">
       PROJECTS
     </h1>
   </a>
-  <div class="h-fit w-full overflow-hidden py-1 rotate-[0.02rad] bg-black dark:bg-white">
-    <div class="flex w-max items-center [animation:scroll-left_60s_linear_infinite] will-change-transform">
 
+  <!-- SCROLL TAB -->
+  <div class="h-fit w-full overflow-hidden py-1 bg-black dark:bg-white">
+    <div class="flex w-max items-center [animation:scroll-left_45s_linear_infinite] will-change-transform">
 
-      <!--EggVenture-->
+      <!-- EggVenture -->
       <a href="https://www.youtube.com/watch?v=PSCVZ53H-SI&ab_channel=MatisseWaghemans" target="_blank">
-        <image src="resources/EggVenture.gif" class="h-96 object-contain hover:scale-95" />
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/EggVenture.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">LIMITED ACCESS</span>
+          </div>
+        </div>
       </a>
-      <!---->
 
-      <!--SweetTeeth-->
+      <!-- SweetTeeth -->
       <a href="Projects/SweetTeeth/sweetTeeth.html" target="_blank">
-        <image src="resources/SweetTeeth.gif" class="h-96 object-contain hover:scale-95" />
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/SweetTeeth.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">PLAYABLE</span>
+          </div>
+        </div>
       </a>
-      <!---->
 
-
-      <!--CAWCAW-->
+      <!-- CAWCAW -->
       <a>
-        <image src="resources/CAWCAW.gif" class="h-96 object-contain hover:scale-95" />
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/CAWCAW.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">IN DEVELOPMENT</span>
+          </div>
+        </div>
       </a>
-      <!---->
 
-      <!--RotNRubber-->
+      <!-- RotNRubber -->
       <a>
-        <image src="resources/Rot'NRubber.gif" class="h-96 object-contain hover:scale-95" />
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/Rot'NRubber.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">IN DEVELOPMENT</span>
+          </div>
+        </div>
       </a>
-      <!---->
 
-      <!-- Duplicate if you want a loop -->
+      <!-- (Duplicate entries for looping can go here...) -->
+
+      <!-- EggVenture -->
+      <a href="https://www.youtube.com/watch?v=PSCVZ53H-SI&ab_channel=MatisseWaghemans" target="_blank">
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/EggVenture.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">LIMITED ACCESS</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- SweetTeeth -->
+      <a href="Projects/SweetTeeth/sweetTeeth.html" target="_blank">
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/SweetTeeth.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">PLAYABLE</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- CAWCAW -->
+      <a>
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/CAWCAW.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">IN DEVELOPMENT</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- RotNRubber -->
+      <a>
+        <div class="relative group h-96 w-auto mx-0.5">
+          <img src="resources/Rot'NRubber.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-2xl p-2">IN DEVELOPMENT</span>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
 
-  <!--GAMEJAMS-->
-  <div class=" flex w-full mx-auto mt-80 mb-20">
-    <h1 class="mx-auto mb-5 text-xl font-sans font-bold text-black dark:text-white rotate-[-0.01rad]">
+  <!-- GAMEJAMS -->
+  <div class="flex w-full mx-auto mt-80 mb-20">
+    <h1 class="mx-auto mb-5 text-xl font-sans font-bold text-black dark:text-white">
       GAMEJAMS
     </h1>
   </div>
-  <div class="h-fit w-full overflow-hidden py-0.5 rotate-[-0.01rad] bg-black dark:bg-white">
-    <ul class="flex w-max items-center  [animation:scroll-left_20s_linear_infinite]" target="_blank">
-      <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank">
-        <img src="resources/TheGreatMigration.jpg" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank">
-        <img src="resources/YouCantHoleIt.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://andresbull.itch.io/thecore" target="_blank">
-        <img src="resources/CORE.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank">
-        <img src="resources/BusOff.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <!-- Duplicate if you want a loop -->
-      <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank">
-        <img src="resources/TheGreatMigration.jpg" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank">
-        <img src="resources/YouCantHoleIt.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://andresbull.itch.io/thecore" target="_blank">
-        <img src="resources/CORE.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-      <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank">
-        <img src="resources/BusOff.gif" class="h-48 object-contain hover:scale-95" />
-      </a>
-    </ul>
-  </div>
 
-  <div class="flex items-center justify-center">
-    <div class="rounded-full w-1/2 m-10 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
-      <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
-      <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
-      <button id="toggleDark"
-        class="mt-8 rounded-md bg-gray-100 hover:bg-gray-500 dark:bg-gray-900 dark:hover:bg-gray-500 px-4 py-2 text-sm font-medium text-black dark:text-white">
-        Toggle Brightness
-      </button>
+  <div class="h-fit w-full overflow-hidden py-0.5 bg-black dark:bg-white">
+    <div class="flex w-max items-center [animation:scroll-left_20s_linear_infinite] will-change-transform">
+
+      <!-- TheGreatMigration -->
+      <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/TheGreatMigration.jpg"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-black font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- YouCan'tHoleIt -->
+      <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/YouCantHoleIt.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- TheCore -->
+      <a href="https://andresbull.itch.io/thecore" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/CORE.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BusOff -->
+      <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/BusOff.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Duplicates for loop effect -->
+
+      <!-- TheGreatMigration -->
+      <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/TheGreatMigration.jpg"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-black font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- YouCan'tHoleIt -->
+      <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/YouCantHoleIt.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- TheCore -->
+      <a href="https://andresbull.itch.io/thecore" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/CORE.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BusOff -->
+      <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank">
+        <div class="relative group h-48 w-auto mx-0.5">
+          <img src="resources/BusOff.gif"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-2">
+            <span class="text-white font-sans font-bold text-lg">PLAYABLE DEMO</span>
+          </div>
+        </div>
+      </a>
+
     </div>
+
+  </div>
+  <div
+    class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
+    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
+    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
+    <button id="toggleDark"
+      class="mt-8 rounded-md bg-gray-100 hover:bg-gray-500 dark:bg-gray-900 dark:hover:bg-gray-500 px-4 py-2 text-sm font-medium text-black dark:text-white">
+      Toggle Brightness
+    </button>
   </div>
 
+  </div>
   </audio>
   <audio id="darkModeSound" preload="auto">
     <source src="./resources/flashbang.wav" type="audio/mpeg">
