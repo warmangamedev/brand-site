@@ -2,21 +2,21 @@
 
 /* Light mode */
 .svg-path {
-  fill: #333; /* Dark color for light mode */
+  fill: #333;
+  /* Dark color for light mode */
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   .svg-path {
-    fill: #fff; /* Light color for dark mode */
+    fill: #fff;
+    /* Light color for dark mode */
   }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-    /* ... */
-}
+@theme {}
 
 body {
   @apply bg-white;
