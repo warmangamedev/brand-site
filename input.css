@@ -1,27 +1,4 @@
 ﻿@import "tailwindcss";
 
-/* Light mode */
-.svg-path {
-  fill: #333;
-  /* Dark color for light mode */
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .svg-path {
-    fill: #fff;
-    /* Light color for dark mode */
-  }
-}
-
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {}
-
-body {
-  @apply bg-white;
-}
-
-.dark body {
-  @apply bg-black;
-}
