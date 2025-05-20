@@ -1,0 +1,177 @@
+﻿<!-- Add this script at the very beginning to prevent flash of light mode -->
+<script>
+  // Check for saved preference or system preference
+  if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    corePlugins: {
+      preflight: false,
+    },
+    darkMode: 'class',
+  }
+</script>
+
+<!-- Add favicon links -->
+<link rel="icon" href="resources/logo.png" sizes="any">
+<link href="output.css" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Projects</title>
+
+<!-- Header Container -->
+<header class="container mx-auto dark:bg-white bg-black pb-0.5">
+
+  <!-- Header Bar -->
+  <div class="py-2.5 flex justify-between items-end bg-white dark:bg-black">
+
+    <!-- Logo -->
+    <a class="w-32 -mb-2.5" href="index.html">
+      <img class="dark:invert" src='resources/logo_black.svg'>
+    </a>
+
+    <!--Page Navigation-->
+    <nav class="flex space-x-4">
+      <a href="index.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Home
+      </a>
+      <a href="projects.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Projects
+      </a>
+      <!-- <a href="careers.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Careers
+      </a> -->
+    </nav>
+
+    <!-- Social media -->
+    <nav class="flex space-x-2">
+      <a href="https://www.linkedin.com/company/warman-entertainment/" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/linkedin-logo-200h.png'>
+      </a>
+      <a href="https://www.twitch.tv/warman_gamedev" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/twitch-200h.png'>
+      </a>
+      <a href="https://discord.gg/Tqa2CDmnCd" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/discord-200h.png'>
+      </a>
+      <a href="https://www.youtube.com/channel/UCxmM8S4huEJT6asDBnyazGg" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/youtube-200h.png'>
+      </a>
+      <a href="https://www.instagram.com/warman.entertainment/" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/instagram-200h.png'>
+      </a>
+    </nav>
+  </div>
+
+</header>
+
+
+<body>
+
+  <style>
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white dark:bg-black">
+  <!-- Project Card -->
+  <a href="Projects/SweetTeeth/sweetTeeth.html" class="block border border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
+    <img src="resources/SweetTeeth.gif" alt="Project 1" class="w-full h-fit object-cover border border-black dark:border-white">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white">Sweet Teeth</h3>
+      <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Horror marshmellow roasting</p>
+    </div>
+  </a>
+
+  <!-- Project Card -->
+  <a href="#" class="block border border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
+    <img src="resources/Rot'NRubber.gif" alt="Project 2" class="w-full h-fit object-cover border border-black dark:border-white">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white">Rot 'N Rubber</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-500">In Development</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Apocalyptic, drifting hit and run</p>
+    </div>
+  </a>
+
+  <!-- Project Card -->
+  <a href="#" class="block border border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
+    <img src="resources/CAWCAW.gif" alt="Project 3" class="w-full h-fit object-cover border border-black dark:border-white">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white">CAW CAW</h3>
+      <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable Demo</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Airborne medieval vengeance</p>
+    </div>
+  </a>
+
+  <!-- Project Card -->
+  <a href="#" class="block border border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
+    <img src="resources/EggVenture.gif" alt="Project 4" class="w-full h-fit object-cover border border-black dark:border-white">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white">EggVenture</h3>
+      <p class="text-md text-gray-500 dark:text-gray-500">Limited Access</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">VR Tamagochi teambuilding</p>
+    </div>
+  </a>
+</div>
+
+  <div
+    class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
+    <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
+    <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
+    <button id="toggleDark"
+      class="mt-8 rounded-md bg-gray-100 hover:bg-gray-500 dark:bg-gray-900 dark:hover:bg-gray-500 px-4 py-2 text-sm font-medium text-black dark:text-white">
+      Toggle Brightness
+    </button>
+  </div>
+
+  </div>
+  </audio>
+  <audio id="darkModeSound" preload="auto">
+    <source src="./resources/flashbang.wav" type="audio/mpeg">
+    <!-- Add a fallback sound or alternative format if needed -->
+  </audio>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleDark = document.getElementById('toggleDark');
+      const darkModeSound = document.getElementById('darkModeSound');
+
+      toggleDark.addEventListener('click', function () {
+        // Check current mode before toggle
+        const isDarkMode = document.documentElement.classList.contains('dark');
+
+        // Toggle the dark class on the html element
+        document.documentElement.classList.toggle('dark');
+
+        // Play appropriate sound based on the mode we're switching TO
+        if (document.documentElement.classList.contains('dark') == false) {
+          // Playing darkModeSound (switching to dark)
+          darkModeSound.currentTime = 0;
+          darkModeSound.volume = 0.1;
+          darkModeSound.play().catch(e => console.log("Sound play failed:", e));
+          localStorage.theme = 'dark';
+        }
+
+        console.log("Dark mode toggled:", document.documentElement.classList.contains('dark'));
+      });
+    });
+  </script>
+</body>
