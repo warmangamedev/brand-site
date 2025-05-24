@@ -751,7 +751,53 @@
   }
 }
 .animate-squiggly {
-  animation: squiggly-anim 1.25s linear infinite;
+  animation: squiggly-anim 2s linear infinite;
+}
+@keyframes squiggly-anim {
+  0% {
+    filter: url('#squiggly-0');
+  }
+  20% {
+    filter: url('#squiggly-1');
+  }
+  40% {
+    filter: url('#squiggly-2');
+  }
+  60% {
+    filter: url('#squiggly-3');
+  }
+  80% {
+    filter: url('#squiggly-4');
+  }
+  100% {
+    filter: url('#squiggly-5');
+  }
+}
+.animate-squiggly-fast {
+  animation: squiggly-anim 1s linear infinite;
+}
+@keyframes squiggly-anim {
+  0% {
+    filter: url('#squiggly-5');
+  }
+  20% {
+    filter: url('#squiggly-6');
+  }
+  40% {
+    filter: url('#squiggly-7');
+  }
+  60% {
+    filter: url('#squiggly-8');
+  }
+  80% {
+    filter: url('#squiggly-9');
+  }
+  100% {
+    filter: url('#squiggly-10');
+  }
+}
+.animate-squiggly-slow {
+  animation: squiggly-anim 5s linear infinite;
 }
 @property --tw-rotate-x {
   syntax: "*";

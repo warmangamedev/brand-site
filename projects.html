@@ -27,7 +27,7 @@
 <title>Projects</title>
 
 <!-- Header Container -->
-<header class="container mx-auto dark:bg-white bg-black pb-0.5">
+<header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly-slow">
 
   <!-- Header Bar -->
   <div class="py-2.5 flex justify-between items-end bg-white dark:bg-black">
@@ -90,7 +90,7 @@
     }
   </style>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white dark:bg-black">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white dark:bg-black animate-squiggly">
   <!-- Project Card -->
   <a href="Projects/SweetTeeth/sweetTeeth.html" class="block border border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
     <img src="resources/SweetTeeth.gif" alt="Project 1" class="w-full h-fit object-cover border border-black dark:border-white">
@@ -134,7 +134,7 @@
 
   <!-- Dark Mode Button -->
   <div
-    class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white">
+    class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white animate-squiggly">
     <h3 class="text-base font-medium tracking-tight text-white dark:text-black">Site settings:</h3>
     <p class="mt-2 text-sm text-slate-100 dark:text-slate-600">Change your preferences here..</p>
     <button id="toggleDark"
@@ -143,36 +143,6 @@
     </button>
   </div>
 
-  </div>
-  </audio>
-  <audio id="darkModeSound" preload="auto">
-    <source src="./resources/flashbang.wav" type="audio/mpeg">
-    <!-- Add a fallback sound or alternative format if needed -->
-  </audio>
-
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleDark = document.getElementById('toggleDark');
-      const darkModeSound = document.getElementById('darkModeSound');
-
-      toggleDark.addEventListener('click', function () {
-        // Check current mode before toggle
-        const isDarkMode = document.documentElement.classList.contains('dark');
-
-        // Toggle the dark class on the html element
-        document.documentElement.classList.toggle('dark');
-
-        // Play appropriate sound based on the mode we're switching TO
-        if (document.documentElement.classList.contains('dark') == false) {
-          // Playing darkModeSound (switching to dark)
-          darkModeSound.currentTime = 0;
-          darkModeSound.volume = 0.1;
-          darkModeSound.play().catch(e => console.log("Sound play failed:", e));
-          localStorage.theme = 'dark';
-        }
-
-        console.log("Dark mode toggled:", document.documentElement.classList.contains('dark'));
-      });
-    });
-  </script>
+  <script src="darkMode.js"></script>
+  <script src="squiggly.js"></script>
 </body>

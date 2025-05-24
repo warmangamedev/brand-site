@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Check for saved preference or system preference
+  if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +21,7 @@
 
 </head>
 <!-- Header Container -->
-<header class="container mx-auto dark:bg-white bg-black pb-0.5">
+<header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly-slow">
 
   <!-- Header Bar -->
   <div class="py-2.5 flex justify-between items-end bg-white dark:bg-black">
@@ -176,6 +185,11 @@
     document.body.appendChild(script);
 
   </script>
+
+
+  <script src="../../darkMode.js"></script>
+  <script src="../../squiggly.js"></script>
 </body>
+
 
 </html>

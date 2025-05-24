@@ -14,3 +14,17 @@ body { padding: 0; margin: 0; background:black}
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: gray; padding: 10px; display: none }
+
+
+@keyframes squiggly-anim {
+  0% { filter: url('#squiggly-5'); }
+  20% { filter: url('#squiggly-6'); }
+  40% { filter: url('#squiggly-7'); }
+  60% { filter: url('#squiggly-8'); }
+  80% { filter: url('#squiggly-9'); }
+  100% { filter: url('#squiggly-10'); }
+}
+
+.animate-squiggly-slow {
+  animation: squiggly-anim 5s linear infinite;
+}
