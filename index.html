@@ -77,15 +77,20 @@
 </header>
 
 <body>
-  <!--HERO-->
-  <div class="flex h-60 w-full items-center mx-auto mt-20 animate-squiggly-fast">
-    <h1 class="mx-auto text-3xl font-sans font-bold text-black  dark:text-white">
-      "
-      <span class="text-black dark:text-white font-sans font-bold text-2xl p-2 " contenteditable="">A one man army in
-        digital arts & entertainment</span>
-      "
-    </h1>
-  </div>
+<!-- HERO -->
+<div class="flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
+  <h1 class="mx-auto text-3xl font-sans font-bold text-black dark:text-white">
+    "
+    <span id="quoteText" class="text-black dark:text-white font-sans font-bold text-2xl p-2" contenteditable="">
+      A one man army in digital arts & entertainment
+    </span>
+    "
+  </h1>
+</div>
+<p class="flex text-gray-700 dark:text-gray-300 justify-center italic text-xl font-sans font-bold animate-squiggly-fast">
+  <span class="text-black dark:text-white">-</span>
+  <span id="quoteAttribution">'a client'</span>
+</p>
 
   <style>
     @keyframes scroll-left {
@@ -333,7 +338,7 @@
   </div>
 
   </div>
-
+  <script src="editableQuotes.js"></script>
   <script src="darkMode.js"></script>
   <script src="squiggly.js"></script>
 </body>
