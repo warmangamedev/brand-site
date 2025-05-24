@@ -765,7 +765,7 @@
     filter: url('#squiggly-4');
   }
   100% {
-    filter: url('#squiggly-0');
+    filter: url('#squiggly-1');
   }
 }
 .animate-squiggly {
@@ -788,7 +788,7 @@
     filter: url('#squiggly-4');
   }
   100% {
-    filter: url('#squiggly-0');
+    filter: url('#squiggly-1');
   }
 }
 .animate-squiggly-fast {
@@ -796,7 +796,7 @@
 }
 @keyframes squiggly-anim {
   0% {
-    filter: url('#squiggly-5');
+    filter: url('#squiggly-0');
   }
   20% {
     filter: url('#squiggly-6');
@@ -811,7 +811,7 @@
     filter: url('#squiggly-9');
   }
   100% {
-    filter: url('#squiggly-5');
+    filter: url('#squiggly-1');
   }
 }
 .animate-squiggly-slow {

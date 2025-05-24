@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Select the turbulence elements AFTER they're in the DOM
   const turbulenceElements = [
-    document.getElementById("turbulence0"),
-    document.getElementById("turbulence1"),
     document.getElementById("turbulence2"),
     document.getElementById("turbulence3"),
     document.getElementById("turbulence4"),

@@ -32,7 +32,7 @@
   40% { filter: url('#squiggly-2'); }
   60% { filter: url('#squiggly-3'); }
   80% { filter: url('#squiggly-4'); }
-  100% { filter: url('#squiggly-0'); }
+  100% { filter: url('#squiggly-1'); }
 }
 
 .animate-squiggly {
@@ -45,7 +45,7 @@
   40% { filter: url('#squiggly-2'); }
   60% { filter: url('#squiggly-3'); }
   80% { filter: url('#squiggly-4'); }
-  100% { filter: url('#squiggly-0'); }
+  100% { filter: url('#squiggly-1'); }
 }
 
 .animate-squiggly-fast {
@@ -53,12 +53,12 @@
 }
 
 @keyframes squiggly-anim {
-  0% { filter: url('#squiggly-5'); }
+  0% { filter: url('#squiggly-0'); }
   20% { filter: url('#squiggly-6'); }
   40% { filter: url('#squiggly-7'); }
   60% { filter: url('#squiggly-8'); }
   80% { filter: url('#squiggly-9'); }
-  100% { filter: url('#squiggly-5'); }
+  100% { filter: url('#squiggly-1'); }
 }
 
 .animate-squiggly-slow {
