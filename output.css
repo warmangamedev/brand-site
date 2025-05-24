@@ -252,6 +252,9 @@
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
   }
+  .mt-100 {
+    margin-top: calc(var(--spacing) * 100);
+  }
   .-mb-2 {
     margin-bottom: calc(var(--spacing) * -2);
   }
