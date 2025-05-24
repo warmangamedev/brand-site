@@ -18,10 +18,23 @@
 
 @theme {}
 
-body {
+.body {
   @apply bg-white;
 }
 
 .dark body {
   @apply bg-black;
+}
+
+@keyframes squiggly-anim {
+  0% { filter: url('#squiggly-0'); }
+  20% { filter: url('#squiggly-1'); }
+  40% { filter: url('#squiggly-2'); }
+  60% { filter: url('#squiggly-3'); }
+  80% { filter: url('#squiggly-4'); }
+  100% { filter: url('#squiggly-5'); }
+}
+
+.animate-squiggly {
+  animation: squiggly-anim 1.25s linear infinite;
 }

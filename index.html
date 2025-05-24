@@ -18,7 +18,63 @@
   }
 </script>
 
+  
+<!--Random scratchy text-->
+<script>
+  const turbulenceElements = [
+    document.getElementById("turbulence0"),
+    document.getElementById("turbulence1"),
+    document.getElementById("turbulence2"),
+    document.getElementById("turbulence3"),
+    document.getElementById("turbulence4"),
+    document.getElementById("turbulence5")
+  ];
+
+  function updateSeeds() {
+    turbulenceElements.forEach(turbulence => {
+      var randomFreq = Math.floor(Math.random());
+      turbulence.setAttribute("baseFrequency", randomFreq);
+    });
+  }
+
+  // Run every 50ms for smooth animation
+  setInterval(updateSeeds, 50);
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="squiggly-0">
+      <feTurbulence id="turbulence0" baseFrequency="0.02" numOctaves="10" result="noise" seed="0" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="4" />
+    </filter>
+    <filter id="squiggly-1">
+      <feTurbulence id="turbulence1" baseFrequency="0.02" numOctaves="10" result="noise" seed="1" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+    </filter>
+
+    <filter id="squiggly-2">
+      <feTurbulence id="turbulence2" baseFrequency="0.02" numOctaves="10" result="noise" seed="2" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+    </filter>
+    <filter id="squiggly-3">
+      <feTurbulence id="turbulence3" baseFrequency="0.02" numOctaves="10" result="noise" seed="3" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+    </filter>
+
+    <filter id="squiggly-4">
+      <feTurbulence id="turbulence4" baseFrequency="0.02" numOctaves="10" result="noise" seed="4" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+    </filter>
+    
+    <filter id="squiggly-5">
+      <feTurbulence id="turbulence4" baseFrequency="0.02" numOctaves="10" result="noise" seed="4" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+    </filter>
+  </defs>
+</svg>
+
 <!-- Add favicon links -->
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 <link rel="icon" href="resources/logo.png" sizes="any">
 <link href="output.css" rel="stylesheet" />
 <meta charset="UTF-8" />
@@ -27,7 +83,7 @@
 <title>Warman Entertainment</title>
 
 <!-- Header Container -->
-<header class="container mx-auto dark:bg-white bg-black pb-0.5">
+<header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly">
 
   <!-- Header Bar -->
   <div class="py-2.5 flex justify-between items-end bg-white dark:bg-black">
@@ -75,16 +131,15 @@
 
 </header>
 
-
 <body>
-
   <!--HERO-->
-  <div class="flex h-60 w-full items-center mx-auto mt-20">
+  <div class="flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
     <h1 class="mx-auto text-3xl font-sans font-bold text-black  dark:text-white">
-      "A one man army in digital arts & entertainment"
+      "
+      <span class="text-white font-sans font-bold text-2xl p-2" contenteditable="">A one man army in digital arts & entertainment</span>
+      "
     </h1>
   </div>
-
 
   <style>
     @keyframes scroll-left {
@@ -99,14 +154,14 @@
   </style>
 
   <!-- PROJECTS -->
-  <a class="flex mx-auto mt-20" href="projects.html">
+  <a class="flex mx-auto mt-20 animate-squiggly" href="projects.html">
     <h1 class="mx-auto mb-5 text-xl font-sans font-bold text-black dark:text-white">
       PROJECTS
     </h1>
   </a>
 
   <!-- SCROLL TAB -->
-  <div class="h-fit w-full overflow-hidden py-1 bg-black dark:bg-white">
+  <div class="h-fit w-full overflow-hidden py-1 bg-black dark:bg-white animate-squiggly">
     <div class="flex w-max items-center [animation:scroll-left_45s_linear_infinite] will-change-transform">
 
       <!-- EggVenture -->
@@ -363,4 +418,6 @@
       });
     });
   </script>
+
+
 </body>
