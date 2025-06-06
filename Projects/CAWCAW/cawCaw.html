@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Check for saved preference or system preference
+  if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Fined Dining</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+
+
+</head>
+<!-- Header Container -->
+<header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly-slow">
+
+  <!-- Header Bar -->
+  <div class="py-2.5 flex justify-between items-end bg-white dark:bg-black">
+
+    <!-- Logo -->
+    <a class="w-32 -mb-2.5" href="../../index.html">
+      <img class="dark:invert" src='../../resources/logo_black.svg'>
+    </a>
+
+    <!--Page Navigation-->
+    <nav class="flex space-x-4">
+      <a href="../../index.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Home
+      </a>
+      <a href="../../projectsOverview.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Projects
+      </a>
+      <!-- <a href="careers.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Careers
+      </a> -->
+    </nav>
+
+    <!-- Social media -->
+    <nav class="flex space-x-2">
+      <a href="https://www.linkedin.com/company/warman-entertainment/" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='../../resources/icons/linkedin-logo-200h.png'>
+      </a>
+      <a href="https://www.twitch.tv/warman_gamedev" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='../../resources/icons/twitch-200h.png'>
+      </a>
+      <a href="https://discord.gg/Tqa2CDmnCd" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='../../resources/icons/discord-200h.png'>
+      </a>
+      <a href="https://www.youtube.com/channel/UCxmM8S4huEJT6asDBnyazGg" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='../../resources/icons/youtube-200h.png'>
+      </a>
+      <a href="https://www.instagram.com/warman.entertainment/" target="_blank">
+        <img class="w-6 dark:invert hover:blur-sm" src='../../resources/icons/instagram-200h.png'>
+      </a>
+    </nav>
+  </div>
+
+</header>
+
+<iframe frameborder="0" src="https://itch.io/embed-upload/13918931?color=aac08d" allowfullscreen="" width="980" height="640"><a href="https://warman-entertainment.itch.io/fined-dining">Play Fined Dining on itch.io</a></iframe>
+
+</html>
