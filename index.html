@@ -1,4 +1,5 @@
-﻿<!-- Add this script at the very beginning to prevent flash of light mode -->
+﻿<html lang="en">
+<!-- Add this script at the very beginning to prevent flash of light mode -->
 <script>
   // Check for saved preference or system preference
   if (localStorage.theme === 'dark' ||
@@ -18,17 +19,18 @@
   }
 </script>
 
-<!-- Add favicon links -->
-<link rel="icon" type="image/png" href="resources/logo_black.svg" sizes="32x32">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
-<link rel="icon" href="resources/logo.png" sizes="any">
-<link href="output.css" rel="stylesheet" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Warman Entertainment</title>
-<meta name="description" content="Warman Entertainment is the indie digital arts studio by Matisse Waghemans, crafting creative game‑jam demos and digital experiences.">
-
+<head>
+  <!-- Add favicon links -->
+  <meta charset="UTF-8" />
+  <title>Warman Entertainment</title>
+  <meta name="description"
+    content="Warman Entertainment is the indie digital arts studio by Matisse Waghemans, crafting creative game‑jam demos and digital experiences.">
+    <link rel="icon" href="resources/logo.png" sizes="any">
+    <link href="output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 <!-- Header Container -->
 <header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly-slow">
 
@@ -61,10 +63,10 @@
       <a name="LinkedIn" href="https://www.linkedin.com/company/warman-entertainment/" target="_blank">
         <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/linkedin-logo-200h.png'>
       </a>
-      <a name="Twitch"href="https://www.twitch.tv/warman_gamedev" target="_blank">
+      <a name="Twitch" href="https://www.twitch.tv/warman_gamedev" target="_blank">
         <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/twitch-200h.png'>
       </a>
-      <a name="Discord"href="https://discord.gg/Tqa2CDmnCd" target="_blank">
+      <a name="Discord" href="https://discord.gg/Tqa2CDmnCd" target="_blank">
         <img class="w-6 dark:invert hover:blur-sm" src='resources/icons/discord-200h.png'>
       </a>
       <a name="YouTube" href="https://www.youtube.com/channel/UCxmM8S4huEJT6asDBnyazGg" target="_blank">
@@ -237,7 +239,7 @@
         </div>
       </a>
 
-      
+
       <!-- Fined Dining -->
       <a href="Projects/FinedDining/finedDining.html">
         <div class="relative group h-96 w-auto mx-0.5">
@@ -299,7 +301,7 @@
           </div>
         </div>
       </a>
-      
+
       <!-- Fined Dining -->
       <a href="Projects/FinedDining/finedDining.html">
         <div class="relative group h-96 w-auto mx-0.5">
@@ -357,3 +359,5 @@
   <script src="darkMode.js"></script>
   <script src="squiggly.js"></script>
 </body>
+
+</html>
