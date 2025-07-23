@@ -1,5 +1,4 @@
-﻿
-<script src="https://cdn.tailwindcss.com"></script>
+﻿<script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     corePlugins: {
@@ -38,10 +37,10 @@
         class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
         Projects
       </a>
-      <!-- <a href="careers.html"
+      <a href="colab.html"
         class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
-        Careers
-      </a> -->
+        Colab
+      </a>
     </nav>
 
     <!-- Social media -->
@@ -80,69 +79,74 @@
       }
     }
   </style>
+<div class="grid grid-cols-1 mt-40 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white dark:bg-black">
 
-  <div class="grid grid-cols-1 mt-40 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white dark:bg-black animate-squiggly">
+  <!-- Project Card -->
+  <a href="Projects/FinedDining/finedDining.html" target="_blank"
+    class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-black">
+    <img src="resources/FinedDining.gif" alt="Gamejam 3"
+      class="w-full h-fit object-cover border-4 border-black dark:border-white hover:brightness-105 transition duration-300">
+    <div class="p-4">
+      <h3
+        class="text-lg font-bold text-black dark:text-white animate-squiggly transition-colors duration-300 hover:text-blue-600">
+        Fined Dining</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-500">Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Dystopian bureaucracy hunting & fishing.</p>
+    </div>
+  </a>
 
-    <!-- Project Card -->
-    <a href="Projects/FinedDining/finedDining.html" target="_blank"
-      class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
-      <img src="resources/FinedDining.gif" alt="Gamejam 3"
-        class="w-full h-fit object-cover border-4 border-black dark:border-white">
-      <div class="p-4">
-        <h3 class="text-lg font-bold text-black dark:text-white">Fined Dining</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-500">Playable</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400">Dystopian bureacracy hunting & fishing.</p>
-      </div>
-    </a>
+  <!-- Project Card -->
+  <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank"
+    class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-black">
+    <img src="resources/YouCantHoleIt.gif" alt="Gamejam 1"
+      class="w-full h-fit object-cover border-4 border-black dark:border-white hover:brightness-105 transition duration-300">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white animate-squiggly transition-colors duration-300 hover:text-blue-600">
+        You Can't Hole It</h3>
+      <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Impossible sabotage golf</p>
+    </div>
+  </a>
 
-    <!-- Project Card -->
-    <a href="https://andresbull.itch.io/you-cant-hole-it" target="_blank"
-      class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
-      <img src="resources/YouCantHoleIt.gif" alt="Gamejam 1"
-        class="w-full h-fit object-cover border-4 border-black dark:border-white">
-      <div class="p-4">
-        <h3 class="text-lg font-bold text-black dark:text-white">You Can't Hole It</h3>
-        <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400">Impossible sabotage golf</p>
-      </div>
-    </a>
+  <!-- Project Card -->
+  <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank"
+    class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-black">
+    <img src="resources/TheGreatMigration.jpg" alt="Gamejam 2"
+      class="w-full h-fit object-cover border-4 border-black dark:border-white hover:brightness-105 transition duration-300">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white animate-squiggly transition-colors duration-300 hover:text-blue-600">
+        The Great Migration</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-500">Semi-Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">1-bit caveman platformer</p>
+    </div>
+  </a>
 
-    <!-- Project Card -->
-    <a href="https://maximeylenbosch.itch.io/poopoo" target="_blank"
-      class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
-      <img src="resources/TheGreatMigration.jpg" alt="Gamejam 2"
-        class="w-full h-fit object-cover border-4 border-black dark:border-white">
-      <div class="p-4">
-        <h3 class="text-lg font-bold text-black dark:text-white">The Great Migration</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-500">Semi-Playable</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400">1-bit caveman platformer</p>
-      </div>
-    </a>
+  <!-- Project Card -->
+  <a href="https://andresbull.itch.io/thecore" target="_blank"
+    class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-black">
+    <img src="resources/CORE.gif" alt="Gamejam 4"
+      class="w-full h-fit object-cover border-4 border-black dark:border-white hover:brightness-105 transition duration-300">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white animate-squiggly transition-colors duration-300 hover:text-blue-600">
+        The C.O.R.E</h3>
+      <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Communist top-down shooter</p>
+    </div>
+  </a>
 
-    <!-- Project Card -->
-    <a href="https://andresbull.itch.io/thecore" target="_blank"
-      class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
-      <img src="resources/CORE.gif" alt="Gamejam 4"
-        class="w-full h-fit object-cover border-4 border-black dark:border-white">
-      <div class="p-4">
-        <h3 class="text-lg font-bold text-black dark:text-white">The C.O.R.E</h3>
-        <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Playable</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400">Communist top-down shooter</p>
-      </div>
-    </a>
-
-    <!-- Project Card -->
-    <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank"
-      class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-black">
-      <img src="resources/BusOff.gif" alt="Gamejam 5"
-        class="w-full h-fit object-cover border-4 border-black dark:border-white">
-      <div class="p-4">
-        <h3 class="text-lg font-bold text-black dark:text-white">Bus Off</h3>
-        <p class="text-md text-gray-500 dark:text-gray-500">Playable</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400">Bus management sim</p>
-      </div>
-    </a>
-  </div>
+  <!-- Project Card -->
+  <a href="https://daestudios.itch.io/bus-off-this-is-my-seat" target="_blank"
+    class="block border-4 border-black dark:border-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-black">
+    <img src="resources/BusOff.gif" alt="Gamejam 5"
+      class="w-full h-fit object-cover border-4 border-black dark:border-white hover:brightness-105 transition duration-300">
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-black dark:text-white animate-squiggly transition-colors duration-300 hover:text-blue-600">
+        Bus Off</h3>
+      <p class="text-md text-gray-500 dark:text-gray-500">Playable</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Bus management sim</p>
+    </div>
+  </a>
+</div>
 
   <div
     class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white animate-squiggly">
