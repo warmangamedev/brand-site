@@ -25,12 +25,12 @@
   <title>WARMAN</title>
   <meta name="description"
     content="Warman Entertainment is the indie digital arts studio by Matisse Waghemans, crafting creative game‑jam demos and digital experiences.">
-    <link rel="icon" href="resources/logo.png" sizes="any">
-    <link href="output.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+  <link rel="icon" href="resources/logo.png" sizes="any">
+  <link href="output.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 <!-- Header Container -->
 <header class="container mx-auto dark:bg-white bg-black pb-0.5 animate-squiggly-slow">
 
@@ -46,7 +46,7 @@
     <nav class="flex space-x-4">
       <a href="index.html"
         class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
-        Home
+        <span class="text-neutral-600 dark:text-neutral-400">&gt;</span> Home
       </a>
       <a href="projectsOverview.html"
         class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
@@ -90,7 +90,7 @@
         class="hover:text-neutral-700 hover:dark:text-neutral-300 text-black dark:text-white font-sans font-bold text-2xl p-2"
         contenteditable="">
         <i>
-        A one man army that creates-- not destroys.
+          A one man army that creates-- not destroys.
         </i>
       </span>
       "
@@ -120,11 +120,13 @@
         <div
           class="bg-gray-50 dark:bg-neutral-800 rounded-2xl p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl duration-300">
           <div class="text-black dark:text-white mb-4">
-            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
               <path d="M13 16h-1v-4H8v-1h4V7h1v4h4v1h-4v4z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">RESULT ORIENTED</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">RESULT ORIENTED
+          </h3>
           <p class=" font-sans text-gray-600 dark:text-gray-400">
             Not into the whole “9-5” thing. <br>When I’m on a project, I dive deep.<br><br>
             <span class="text-neutral-700 dark:text-neutral-300">It's not about hours—<br>it’s
@@ -136,12 +138,14 @@
         <div
           class="bg-gray-50 dark:bg-neutral-800 rounded-2xl p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl duration-300">
           <div class="text-black dark:text-white mb-4">
-            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
               <path d="M12 20l9-5-9-5-9 5 9 5z" />
               <path d="M12 12V4l9 5-9 5-9-5 9-5z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">CONTROLLED CHAOS</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">CONTROLLED CHAOS
+          </h3>
           <p class=" font-sans text-gray-600 dark:text-gray-400">
             Solo dev life is messy. <br>I make it work. <br><br>
             <span class="text-neutral-700 dark:text-neutral-300">i translate and balance my personal experiences into my
@@ -153,11 +157,13 @@
         <div
           class="bg-gray-50 dark:bg-neutral-800 rounded-2xl p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl duration-300">
           <div class="text-black dark:text-white mb-4">
-            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-10 h-10 mx-auto animate-squiggly-slow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </div>
-          <h3 class="text-xl font-sans font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">NOT A TEMPLATE</h3>
+          <h3 class="text-xl font-sans font-semibold text-gray-900 dark:text-white mb-2 animate-squiggly-slow">NOT A
+            TEMPLATE</h3>
           <p class=" font-sans text-gray-600 dark:text-gray-400">
             Creativity is a must. <br>Be unique. <br><br>
             <span class="text-neutral-700 dark:text-neutral-300">If it feels like everything else, <br>I scrap
@@ -169,12 +175,10 @@
   </section>
 
   <div class="mx-auto w-fit p-8 animate-squiggly-fast">
-    <a href="colab.html">
-      <button class="px-6 py-3 font-sans font-bold border-2 border-black dark:border-white text-black dark:text-white bg-white dark:bg-black
-        hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300
-        rounded-xl">
-        COLAB
-      </button>
+    <a href="colab.html" class="px-6 py-3 font-sans font-bold border-2 border-black dark:border-white text-black dark:text-white bg-white dark:bg-black
+            hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300
+            rounded-xl cursor-pointer block text-center">
+       <span class="text-neutral-600 dark:text-neutral-400">&gt;</span> COLAB
     </a>
   </div>
 
@@ -208,12 +212,10 @@
 
   <!-- PROJECTS -->
   <div class="mx-auto mt-10 w-fit p-8 animate-squiggly-slow">
-    <a href="projectsOverview.html">
-      <button class="px-6 py-3 font-sans font-bold border-2 border-black dark:border-white text-black dark:text-white bg-white dark:bg-black
+    <a href="projectsOverview.html" class="px-6 py-3 font-sans font-bold border-2 border-black dark:border-white text-black dark:text-white bg-white dark:bg-black
         hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300
         rounded-xl">
-        HIGHTLIGHTED PROJECTS
-      </button>
+      HIGHTLIGHTED PROJECTS <span class="text-neutral-600 dark:text-neutral-400">&lt;</span> 
     </a>
   </div>
 
@@ -348,7 +350,7 @@
   </div>
 
 
-  
+
   <!-- Brightness Toggle -->
   <div
     class="rounded-full w-1/2 mx-auto mt-40 px-20 py-8 shadow-md shadow-black dark:shadow-white bg-black dark:bg-white animate-squiggly">
