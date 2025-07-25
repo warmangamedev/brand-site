@@ -82,20 +82,49 @@
 
 <body>
 
-  <!-- HERO -->
-    <div class=" flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
-      <h1 class="mx-auto text-3xl font-sans font-bold text-black dark:text-white">
-        "
-        <span id="quoteText"
-          class="hover:text-neutral-700 hover:dark:text-neutral-300 text-black dark:text-white font-sans font-bold text-2xl p-2"
-          contenteditable="">
-          <i>
-            A one man army that creates-- not destroys.
-          </i>
-        </span>
-        "
-      </h1>
-    </div>
+<style>
+  .hero-sketch-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-sketch-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/scribble-bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover; /* stretch across entire hero */
+    background-position: center;
+    background-blend-mode: screen;
+    opacity: 0.9; /* adjust for subtlety */
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-sketch-bg > * {
+    position: relative;
+    z-index: 10;
+  }
+</style>
+
+<!-- HERO with sketched animated background -->
+<div class="hero-sketch-bg flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
+  <h1 class="mx-auto text-3xl font-sans font-bold text-black dark:text-white">
+    "
+    <span id="quoteText"
+      class="hover:text-neutral-700 hover:dark:text-neutral-300 text-black dark:text-white font-sans font-bold text-2xl p-2"
+      contenteditable="">
+      <i>
+        A one man army that creates-- not destroys.
+      </i>
+    </span>
+    "
+  </h1>
+</div>
 
     <p
       class="flex mb-20 text-gray-700 dark:text-gray-300 justify-center italic text-xl font-sans font-bold animate-squiggly-fast">
