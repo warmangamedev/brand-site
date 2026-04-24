@@ -56,6 +56,10 @@
         class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
         Colab
       </a>
+      <a href="projects.html"
+        class="text-xl font-sans font-bold text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300">
+        Play
+      </a>
     </nav>
 
     <!-- Social media -->
@@ -82,57 +86,59 @@
 
 <body>
 
-<style>
-  .hero-sketch-bg {
-    position: relative;
-    overflow: hidden;
-  }
+  <style>
+    .hero-sketch-bg {
+      position: relative;
+      overflow: hidden;
+    }
 
-  .hero-sketch-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('resources/scribble-bg.gif');
-    background-repeat: no-repeat;
-    background-size: cover; /* stretch across entire hero */
-    background-position: center;
-    background-blend-mode: screen;
-    opacity: 0.9; /* adjust for subtlety */
-    z-index: 0;
-    pointer-events: none;
-  }
+    .hero-sketch-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('resources/scribble-bg.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* stretch across entire hero */
+      background-position: center;
+      background-blend-mode: screen;
+      opacity: 0.9;
+      /* adjust for subtlety */
+      z-index: 0;
+      pointer-events: none;
+    }
 
-  .hero-sketch-bg > * {
-    position: relative;
-    z-index: 10;
-  }
-</style>
+    .hero-sketch-bg>* {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
 
-<!-- HERO with sketched animated background -->
-<div class="hero-sketch-bg flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
-  <h1 class="mx-auto text-3xl font-sans font-bold text-black dark:text-white">
-    "
-    <span id="quoteText"
-      class="hover:text-neutral-700 hover:dark:text-neutral-300 text-black dark:text-white font-sans font-bold text-2xl p-2"
-      contenteditable="">
-      <i>
-        A one man army that creates-- not destroys.
-      </i>
-    </span>
-    "
-  </h1>
-</div>
+  <!-- HERO with sketched animated background -->
+  <div class="hero-sketch-bg flex h-60 w-full items-center mx-auto mt-20 animate-squiggly">
+    <h1 class="mx-auto text-3xl font-sans font-bold text-black dark:text-white">
+      "
+      <span id="quoteText"
+        class="hover:text-neutral-700 hover:dark:text-neutral-300 text-black dark:text-white font-sans font-bold text-2xl p-2"
+        contenteditable="">
+        <i>
+          A one man army that creates-- not destroys.
+        </i>
+      </span>
+      "
+    </h1>
+  </div>
 
-    <p
-      class="flex mb-20 text-gray-700 dark:text-gray-300 justify-center italic text-xl font-sans font-bold animate-squiggly-fast">
-      <span class="text-black dark:text-white">-</span>
-      <a id="quoteLink" href="https://www.linkedin.com/in/matisse-waghemans-59786020b/" target="_blank">
-        <span id="quoteAttribution">'a client'</span>
-      </a>
-    </p>
+  <p
+    class="flex mb-20 text-gray-700 dark:text-gray-300 justify-center italic text-xl font-sans font-bold animate-squiggly-fast">
+    <span class="text-black dark:text-white">-</span>
+    <a id="quoteLink" href="https://www.linkedin.com/in/matisse-waghemans-59786020b/" target="_blank">
+      <span id="quoteAttribution">'a client'</span>
+    </a>
+  </p>
 
 
   <!-- Explanation -->
@@ -304,7 +310,8 @@
       </a>
 
       <!-- RotNRubber -->
-      <a href="projects.html" target="https://www.linkedin.com/posts/matisse-waghemans-59786020b_im-making-a-game-hooray-and-im-starting-activity-7370796160774578177-NUOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVXeUMB8K0vQ-_TDtyiSuavzURoBd2M4RM">
+      <a href="projects.html"
+        target="https://www.linkedin.com/posts/matisse-waghemans-59786020b_im-making-a-game-hooray-and-im-starting-activity-7370796160774578177-NUOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVXeUMB8K0vQ-_TDtyiSuavzURoBd2M4RM">
         <div class="relative group h-96 w-auto mx-0.5">
           <img src="resources/Rot'NRubber.gif"
             class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
@@ -367,7 +374,8 @@
 
       <!-- RotNRubber -->
       <a href="projects.html">
-        <div class="relative group h-96 w-auto mx-0.5" target="https://www.linkedin.com/posts/matisse-waghemans-59786020b_im-making-a-game-hooray-and-im-starting-activity-7370796160774578177-NUOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVXeUMB8K0vQ-_TDtyiSuavzURoBd2M4RM">
+        <div class="relative group h-96 w-auto mx-0.5"
+          target="https://www.linkedin.com/posts/matisse-waghemans-59786020b_im-making-a-game-hooray-and-im-starting-activity-7370796160774578177-NUOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVXeUMB8K0vQ-_TDtyiSuavzURoBd2M4RM">
           <img src="resources/Rot'NRubber.gif"
             class="h-full object-contain transition-transform duration-300 group-hover:scale-[0.98]" />
           <div
